@@ -14,6 +14,11 @@ export const metadata = {
         icon: "/images/me.jpeg",
     },
 };
+export const viewport = {
+    initialScale: 1,
+    minimumScale: 1,
+    width: 'device-width'
+}
 export default function RootLayout({ children }) {
     return (
         <html lang="en" id='html'>
