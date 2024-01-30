@@ -71,7 +71,7 @@ const Index = ({ }) => {
 		<div className={styles.formWrap}>
 			<div className={styles.detailInfo}>
 				<button className={styles.goBack} onClick={handleCloseDetail}>
-					<ArrowIcon width={40} height={40} fill='#fff' />
+					<ArrowIcon width={30} height={30} fill='#fff' />
 				</button>
 				<form onSubmit={handleSubmit}>
 					<label htmlFor='email'>Email</label>

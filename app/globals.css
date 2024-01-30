@@ -37,6 +37,7 @@ html.scrollHide::-webkit-scrollbar {
 
 body {
   background-color: rgb(24, 24, 24);
+  overflow-x: hidden;
 }
 
 section {
