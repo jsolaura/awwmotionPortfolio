@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import CurveTransition from '../CurveTransition';
-import bg from '/public/images/back1.jpg';
+import bg from '/public/images/back.jpg';
 import ArrowIcon from "../Icons/ArrowIcon";
 import {projectActions} from "../../redux/modules/projects";
 import {useDispatch, useSelector} from "react-redux";
