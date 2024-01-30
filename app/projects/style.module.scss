@@ -1,0 +1,63 @@
+.projects {
+  width: 100vw;
+  background: linear-gradient(180deg, rgba(24,24,24,1) 0%, rgba(12,12,12,1) 20%, rgba(0,0,0,1) 100%);
+  position: relative;
+  padding-top: 20vh;
+  article {
+    margin-bottom: 5rem;
+    &:last-of-type {
+      margin: 0;
+    }
+    h1 {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: default;
+      margin-bottom: 3rem;
+      span {
+        display: inline-block;
+        margin-left: 0.5rem;
+        text-transform: uppercase;
+      }
+      &:hover svg {
+        animation: rotate .35s ease-in-out;
+      }
+    }
+    .gallery {
+      width: 100%;
+    }
+  }
+
+  .group {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  &.isMobile {
+    padding-top: 10vh;
+    article h1 {
+      margin-bottom: 2rem;
+    }
+    .group {
+      img {
+        transform: scale(0.8);
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(365deg);
+  }
+}

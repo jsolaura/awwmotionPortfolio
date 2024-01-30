@@ -1,0 +1,26 @@
+.fixed {
+  .audioBox {
+    width: 150px;
+    color: #bbb;
+    text-transform: uppercase;
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+    transform: rotate(-90deg);
+    transform-origin: left;
+    letter-spacing: 2px;
+    z-index: 100;
+    span {
+      display: inline-block;
+      width: 30%;
+      transition: color .35s cubic-bezier(.76, 0, .24, 1);
+    }
+    &:hover span {
+      color: #fff;
+    }
+  }
+  &.isMobile .audioBox {
+    left: 1rem;
+    bottom: 1rem;
+  }
+}

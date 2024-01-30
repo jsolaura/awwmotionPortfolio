@@ -1,0 +1,48 @@
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: linear-gradient(360deg, rgba(24,24,24,1) 0%, rgba(12,12,12,1) 70%, rgba(0,0,0,1) 100%);
+  font-family: 'TuskerGrotesk';
+  letter-spacing: 5px;
+  .body {
+    width: 60vw;
+    color: white;
+
+    .introLine{
+      display: flex;
+      font-size: 6vw;
+      justify-content: space-between;
+      text-transform: uppercase;
+    }
+    .introLine p{
+      margin: 0;
+    }
+    .introLine:nth-of-type(5), .introLine:nth-of-type(6){
+      display: inline-flex;
+    }
+    .introLine:nth-of-type(6){
+      right: -40px;
+      position: relative;
+    }
+
+  }
+  .background {
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+  }
+  &.isMobile {
+    .body {
+      width: 100%;
+      .introLine {
+        font-size: 2.7rem;
+      }
+    }
+  }
+}

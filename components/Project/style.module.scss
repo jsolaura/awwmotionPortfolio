@@ -1,0 +1,45 @@
+.project {
+  border-top: 2px solid #bbb;
+  padding: 0.8vw 0;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbb;
+  height: 130px;
+  position: relative;
+  p {
+    font-size: 2vw;
+    margin: 0;
+    &:nth-of-type(1) {
+      margin-right: 0.75vw;
+    }
+    &:nth-of-type(2) {
+      margin-right: 0.75vw;
+    }
+  }
+  .imgContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 0;
+    img {
+      width: 10vw;
+      position: relative;
+      z-index: 300;
+    }
+  }
+  &:last-of-type {
+    border-bottom: 2px solid #bbb;
+  }
+  &.isMobile {
+    height: auto;
+    padding: 1rem 0;
+    p {
+      font-size: 1.2rem;
+    }
+
+  }
+}

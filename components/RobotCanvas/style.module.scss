@@ -1,0 +1,11 @@
+.canvasContainer {
+  z-index: 200;
+  max-width: 500px;
+  cursor: grab;
+  &.grabbing {
+    cursor: grabbing;
+  }
+  &.isMobile {
+    height: 50vh !important;
+  }
+}
