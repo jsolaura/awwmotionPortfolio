@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useScroll, useTransform} from "framer-motion";
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
@@ -12,6 +12,7 @@ import Picture4 from '/public/images/4-1.jpg';
 import Picture5 from '/public/images/5-2.jpg';
 import Picture6 from '/public/images/6-1.jpg';
 import Picture7 from '/public/images/7-2.jpg';
+import Lenis from "@studio-freight/lenis";
 
 const ZoomParallax = () => {
 	const container = useRef(null);
@@ -33,6 +34,14 @@ const ZoomParallax = () => {
 		{ src: Picture6, scale: scale8 },
 		{ src: Picture7, scale: scale9 },
 	]
+	useEffect(() => {
+		const lenis = new Lenis();
+		function raf(time) {
+			lenis.raf(time)
+			requestAnimationFrame(raf)
+		}
+		requestAnimationFrame(raf)
+	}, [])
 	return (
 		<div ref={container} className={styles.container}>
 			<div className={styles.sticky}>

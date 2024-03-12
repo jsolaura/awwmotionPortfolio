@@ -28,7 +28,7 @@ const Robot = (props) => {
 						<meshPhysicalMaterial
 							color="#000000"
 							roughness={1}
-							emissive={'#9ef50e'}
+							emissive='#9ef50e'
 							clearcoat={1}
 							reflectivity={0.2}
 							metalness={0}
