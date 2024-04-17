@@ -33,7 +33,7 @@ const Index = ({ project }) => {
 						{project?.subTitle &&
 							<p>{project?.subTitle}</p>
 						}
-						<img src={`/images/${project?.src}`} alt={project?.title1} />
+						<img src={`/images/${project?.src}`} alt={project?.title1} loading="lazy" />
 						{project?.link &&
 							<button>
 								<a href={project?.link} target='_blank'>More View</a>

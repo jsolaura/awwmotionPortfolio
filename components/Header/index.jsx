@@ -9,6 +9,7 @@ import Nav from './Nav';
 import Image from "next/image";
 import Link from "next/link";
 import useIsMobile from "../../hooks/useIsMobile";
+import ImagePlaceholder from "../ImagePlaceholder";
 
 const menu = {
 	open: {
@@ -34,7 +35,14 @@ const Index = () => {
 	return (
 		<div className={`${styles.header} ${isMobile ? styles.isMobile : ''}`}>
 			<Link href='#' className={styles.logoImage}>
-				<Image src='/images/me.jpeg' alt='myLogo' width={imageResize} height={imageResize} style={{ width: imageResize, height: imageResize }} priority={false} />
+				<ImagePlaceholder
+					src='/images/me.jpeg'
+					alt='myLogo'
+					width={imageResize}
+					height={imageResize}
+					style={{ width: imageResize, height: imageResize }}
+					priority={false}
+				/>
 			</Link>
 			<Nav />
 			{!isMobile &&

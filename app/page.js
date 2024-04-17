@@ -1,15 +1,15 @@
-import Main from './main';
-import About from './about';
-import Projects from './projects';
-import Contact from './contact';
-import CurveTransition from '../components/CurveTransition';
+import dynamic from "next/dynamic";
+
+const Main = dynamic(() => import('./main'));
+const About = dynamic(() => import('./About'));
+const Projects = dynamic(() => import('./Projects'));
+const Contact = dynamic(() => import('./Contact'));
 export default function Home() {
     return (
             <main>
                 <Main />
                 <About />
                 <Projects />
-                <CurveTransition/>
                 <Contact />
             </main>
     );

@@ -12,7 +12,10 @@ import {useSelector} from "react-redux";
 import {featuredWork, projectsData} from "../../constans/projectsData";
 import Modal from "../../components/PortalModal";
 import useIsMobile from "../../hooks/useIsMobile";
-const notoSansKR = Noto_Sans_KR({ subsets: ['latin'] })
+const notoSansKR = Noto_Sans_KR({
+	subsets: ['latin'],
+	display: 'swap'
+})
 
 const Index = () => {
 	const openDetail = useSelector(({projects}) => projects.openDetail);

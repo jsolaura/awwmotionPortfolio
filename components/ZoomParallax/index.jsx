@@ -12,6 +12,7 @@ import Picture4 from '/public/images/4-1.jpg';
 import Picture5 from '/public/images/5-2.jpg';
 import Picture6 from '/public/images/6-1.jpg';
 import Picture7 from '/public/images/7-2.jpg';
+import ImagePlaceholder from "../ImagePlaceholder";
 
 const ZoomParallax = () => {
 	const container = useRef(null);
@@ -39,11 +40,10 @@ const ZoomParallax = () => {
 				{pictures.map(({ src, scale, isVideo }, index) => (
 					<motion.div key={`picture_${index}`} style={{ scale }} className={styles.el}>
 						<div className={styles.imageContainer}>
-							<Image
-								src={src}
+							<ImagePlaceholder
 								fill
+								src={src}
 								alt={`image${index}`}
-								placeholder='blur'
 							/>
 						</div>
 					</motion.div>

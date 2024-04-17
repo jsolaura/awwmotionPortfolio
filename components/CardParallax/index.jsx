@@ -12,6 +12,7 @@ import Picture5 from '/public/images/5-2.jpg';
 import Picture6 from '/public/images/6-1.jpg';
 import Picture7 from '/public/images/7-2.jpg';
 import Lenis from "@studio-freight/lenis";
+import ImagePlaceholder from "../ImagePlaceholder";
 
 const Card = ({ i, src, color, progress, range, targetScale }) => {
 	const container = useRef(null);
@@ -34,7 +35,7 @@ const Card = ({ i, src, color, progress, range, targetScale }) => {
 						className={styles.inner}
 						style={{scale: imageScale}}
 					>
-						<Image
+						<ImagePlaceholder
 							fill
 							src={src}
 							alt="image"

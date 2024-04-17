@@ -6,6 +6,7 @@
   font-family: "TuskerGrotesk";;
   font-weight: auto;
   src: url("/fonts/TuskerGrotesk5500.ttf") format('truetype');
+  font-display: swap;
 }
 
 :root {

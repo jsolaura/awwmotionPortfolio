@@ -5,7 +5,10 @@ import Header from "../components/Header";
 import ScreenBorder from "../components/FixedAudio";
 import ReduxProvider from "../redux/Provider";
 
-const mono = Roboto_Mono({ subsets: ['latin'] })
+const mono = Roboto_Mono({
+    subsets: ['latin'],
+    display: 'swap',
+})
 
 export const metadata = {
     title: "Laura Portfolio",

@@ -37,7 +37,7 @@ const Index = ({ project }) => {
 					animate={isActive ? 'open' : 'closed'}
 					className={styles.imgContainer}
 				>
-					<img src={`/images/${src}`} alt={title1} className={styles.titleImage} />
+					<img src={`/images/${src}`} alt={title1} loading="lazy" className={styles.titleImage} />
 				</motion.div>
 			}
 			<p>{title2}</p>

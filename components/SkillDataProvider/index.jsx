@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image';
 import styles from './style.module.scss';
-
+import ImagePlaceholder from '../../components/ImagePlaceholder';
 const Index = ({ src, width, height, index }) => {
 	const { ref, inView } = useInView({
 		triggerOnce: true,
@@ -27,7 +27,7 @@ const Index = ({ src, width, height, index }) => {
 			transition={{ delay: index * animationDelay }}
 			className={styles.skillImage}
 		>
-			<Image
+			<ImagePlaceholder
 				src={`/images/skills${src}`}
 				alt='skills image'
 				width={width}

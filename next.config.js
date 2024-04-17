@@ -4,6 +4,9 @@ const nextConfig = {
 	experimental: {
 		appDir: true,
 	},
+	images: {
+		formats: ['image/avif', 'image/webp']
+	},
 	webpack: (config, options) => {
 		config.module.rules.push({
 			test: /\.(mp3)$/,

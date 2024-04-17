@@ -10,7 +10,11 @@ import Image from "next/image";
 import {Noto_Sans_KR} from "next/font/google";
 import useIsMobile from "../../hooks/useIsMobile";
 import CardParallax from "../../components/CardParallax";
-const notoSansKR = Noto_Sans_KR({ subsets: ['latin'] })
+import ImagePlaceholder from "../../components/ImagePlaceholder";
+const notoSansKR = Noto_Sans_KR({
+	subsets: ['latin'],
+	display: 'swap'
+})
 const phrase = `Jsolaura is a person that\n build alter-ego multidisciplinary development.\n We can’t predict the future even in a minute,\n we get to think of life as an inexhaustible well.\n Yet everything happens only a certain number of times, and even we can’t remember every single moment.\n How many more times will you bring thought up of a certain afternoon in your childhood,\n some afternoon that might be so deeply\n a part of your being that can't imagine without it?\n Perhaps five or six times more, Perhaps not even that.\n How many more times will you go somewhere what you want to?\n Perhaps thirty three times,\n And yet it all seems limitless like it wouldn't make sense to count.\n we are stuck in the time-lapse.\n I catch invisible things there and then make that powerful stuff.`
 
 const Index = () => {
@@ -83,7 +87,13 @@ const Index = () => {
 				: <CardParallax />
 			}
 			<div ref={container} className={styles.myGif}>
-				<Image src='/images/anigif.gif' alt='myGif' width={500} height={350} style={{ width: '500px', height: '350px' }} />
+				<ImagePlaceholder
+					src='/images/anigif.gif'
+					alt='myGif'
+					width={500}
+					height={350}
+					style={{ width: '500px', height: '350px' }}
+				/>
 			</div>
 			<div className={styles.infoContainer}>
 				<div ref={wordBody} className={styles.wordBody} >
